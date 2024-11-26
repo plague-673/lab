@@ -1,0 +1,151 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ffd1dc, #fff1f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 4vw;
+    text-shadow: 2px 2px 4px #f0a;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 0 15px #ff69b4, 0 0 30px #fff;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#winScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 5px dashed #ff69b4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px pink;
+}
+
+#winScreen h2 {
+    color: #ff69b4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.present {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.present:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo dos botões de controle */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.horizontal-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: 10px 0;
+}
+
+.control-button {
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: #ff1493;
+}
+
+/* Responsividade */
+@media (min-width: 1024px) {
+    .controls {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .control-button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .controls {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .control-button {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .controls {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .control-button {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    canvas {
+        width: 90%;
+        height: auto;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joguinho pro</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajude o quadradinho a chegar no final do negócio >:)</h1>
+        <canvas id="gameCanvas"></canvas>
+        <div id="winScreen" class="hidden">
+            <h2>Parabéns! Você venceu!</h2>
+            <a href="https://wa.me/+5545991357754">
+                <img src="presente.png" alt="Presente" class="present">
+            </a>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="horizontal-controls">
+            <button class="control-button" id="leftButton">←</button>
+            <button class="control-button" id="rightButton">→</button>
+        </div>
+        <div class="horizontal-controls">
+            <button class="control-button" id="upButton">↑</button>
+            <button class="control-button" id="downButton">↓</button>
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
